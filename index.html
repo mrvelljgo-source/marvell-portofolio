@@ -1,40 +1,43 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marvell | Personal Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <nav>
+    <nav id="navbar">
         <div class="logo">MARVELL<span>.</span></div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Pendidikan</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul id="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#education" class="nav-link">Pendidikan</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
     <!-- HOME -->
     <section class="home" id="home">
-
-        <div class="home-text">
+        <div class="home-text reveal">
             <h3>Hello, I'm</h3>
-
             <h1>Marvell <span>ARRAYA</span> KUSNADI</h1>
-
-            <h3>Student of Software Engineering</h3>
-
+            <h3 class="typing-wrapper">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </h3>
             <p>
                 Saya adalah siswa SMK jurusan Rekayasa Perangkat Lunak
                 yang memiliki ketertarikan dalam dunia teknologi,
@@ -42,120 +45,360 @@
                 Saya terus belajar untuk mengembangkan kemampuan
                 dan menciptakan sesuatu yang bermanfaat.
             </p>
-
-            <a href="#about" class="btn">Explore More</a>
+            <div class="home-buttons">
+                <a href="#about" class="btn">Explore More</a>
+                <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/mrvelljgo-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/marvell-arraya-kusnadi-96776a3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/llevram_0?xtok=MWowc3JmeGFmYWtwOQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
         </div>
 
-        <div class="profile-box">
+        <div class="profile-box reveal">
             <img src="foto.png" alt="Foto Marvell">
         </div>
 
+        <div class="scroll-indicator" aria-hidden="true">
+            <span></span>
+        </div>
     </section>
 
     <!-- ABOUT -->
     <section class="about" id="about">
+        <h2 class="section-title reveal">About <span>Me</span></h2>
 
-        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-wrapper">
+            <div class="about-content reveal">
+                <p>
+                    Halo! Nama saya <strong>Marvell Arraya Kusnadi</strong>. Saya merupakan siswa
+                    Rekayasa Perangkat Lunak (RPL) di SMK Negeri 20 Jakarta.
+                    Saya tertarik mempelajari teknologi, desain,
+                    dan pengembangan aplikasi berbasis website.
+                </p>
+                <p style="margin-top: 14px;">
+                    Saya percaya bahwa setiap proses belajar
+                    merupakan kesempatan untuk menjadi lebih baik.
+                    Saya aktif mengerjakan proyek-proyek kecil untuk mengasah skill
+                    dan terus berkembang di bidang teknologi.
+                </p>
+            </div>
 
-        <div class="about-content">
-            <p>
-                Halo! Nama saya Marvell. Saya merupakan siswa
-                Rekayasa Perangkat Lunak (RPL).
-                Saya tertarik mempelajari teknologi, desain,
-                dan pengembangan aplikasi berbasis website.
-
-                Saya percaya bahwa setiap proses belajar
-                merupakan kesempatan untuk menjadi lebih baik.
-            </p>
+            <div class="about-stats reveal">
+                <div class="stat-item">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Proyek Selesai</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label">Teknologi</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Tahun Belajar</span>
+                </div>
+            </div>
         </div>
-
     </section>
 
     <!-- EDUCATION -->
     <section class="education" id="education">
+        <h2 class="section-title reveal">Riwayat <span>Pendidikan</span></h2>
 
-        <h2 class="section-title">Riwayat <span>Pendidikan</span></h2>
+        <div class="edu-grid">
 
-        <div class="education-container">
-
-            <div class="education-card">
+            <div class="edu-card reveal">
+                <div class="edu-icon edu-icon--logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXRYdydGFLDj7n0uZIRvg0H3S03sCUeBQcz4RZkoe30w&s=10" alt="Logo SD Negeri Ragunan 12">
+                </div>
+                <div class="edu-badge">SD</div>
                 <h3>SD Negeri Ragunan 12</h3>
-                <p>2015–2021</p>
+                <p>Sekolah Dasar</p>
+                <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Jakarta Selatan</p>
+                <span class="edu-year">2015 – 2021</span>
             </div>
 
-            <div class="education-card">
+            <div class="edu-card reveal">
+                <div class="edu-icon edu-icon--logo">
+                    <img src="https://smpkemalabhayangkari-2.sch.id/wp-content/uploads/2026/01/IMG_2155.png" alt="Logo SMP Kemala Bhayangkari 2">
+                </div>
+                <div class="edu-badge">SMP</div>
                 <h3>SMP Kemala Bhayangkari 2</h3>
-                <p>2021–2024</p>
+                <p>Sekolah Menengah Pertama</p>
+                <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Jakarta</p>
+                <span class="edu-year">2021 – 2024</span>
             </div>
 
-            <div class="education-card">
+            <div class="edu-card edu-card--active reveal">
+                <div class="edu-icon edu-icon--logo">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtcBAPWx82xvQvdfA73O5YmDoFLp7wYgm4nd8vF6MFHA&s=10" alt="Logo SMK Negeri 20 Jakarta">
+                </div>
+                <div class="edu-badge edu-badge--active">SMK</div>
                 <h3>SMK Negeri 20 Jakarta</h3>
-                <p>Sekarang</p>
+                <p>Rekayasa Perangkat Lunak (RPL)</p>
+                <p class="edu-location"><i class="fa-solid fa-location-dot"></i> Jakarta</p>
+                <span class="edu-year">2024 – Sekarang</span>
+                <span class="badge-active">Aktif</span>
             </div>
 
         </div>
-
     </section>
 
     <!-- SKILLS -->
     <section id="skills">
+        <h2 class="section-title reveal">My <span>Skills</span></h2>
 
-        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-wrapper">
+            <div class="skills-container">
 
-        <div class="skills-container">
-
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress">
-                    <div class="progress-bar progress-html"></div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                        <div>
+                            <h3>HTML</h3>
+                            <span class="skill-pct">85%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-html" data-width="85"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <h3>CSS</h3>
-                <div class="progress">
-                    <div class="progress-bar progress-css"></div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                        <div>
+                            <h3>CSS</h3>
+                            <span class="skill-pct">75%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-css" data-width="75"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="progress">
-                    <div class="progress-bar progress-js"></div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+                        <div>
+                            <h3>JavaScript</h3>
+                            <span class="skill-pct">50%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-js" data-width="50"></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="skill">
-                <h3>PHP & MySQL</h3>
-                <div class="progress">
-                    <div class="progress-bar progress-php"></div>
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-php"></i></div>
+                        <div>
+                            <h3>PHP</h3>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-php" data-width="60"></div>
+                    </div>
                 </div>
-            </div>
 
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-laravel"></i></div>
+                        <div>
+                            <h3>Laravel</h3>
+                            <span class="skill-pct">40%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-laravel" data-width="40"></div>
+                    </div>
+                </div>
+
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+                        <div>
+                            <h3>Git</h3>
+                            <span class="skill-pct">55%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-git" data-width="55"></div>
+                    </div>
+                </div>
+
+                <div class="skill reveal">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                        <div>
+                            <h3>MySQL</h3>
+                            <span class="skill-pct">60%</span>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar progress-mysql" data-width="60"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
-
     </section>
 
     <!-- PROJECTS -->
     <section class="projects" id="projects">
-
-        <h2 class="section-title">My <span>Projects</span></h2>
+        <h2 class="section-title reveal">My <span>Projects</span></h2>
 
         <div class="project-container">
 
-            <div class="project-card">
+            <div class="project-card reveal">
+                <div class="project-tag">Web App</div>
                 <h3>ARENA Z</h3>
                 <p>
                     Website turnamen esports Mobile Legends
                     yang dirancang khusus untuk pelajar.
+                    Dilengkapi dengan sistem pendaftaran tim dan bracket turnamen.
                 </p>
-
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>PHP</span>
+                </div>
                 <a href="https://github.com/mrvelljgo-source/ARENA-Z"
                    class="btn"
                    target="_blank"
                    rel="noopener noreferrer">
-                    View on GitHub
+                    <i class="fa-brands fa-github"></i> View on GitHub
                 </a>
             </div>
 
-            <div class="project
+            <div class="project-card reveal">
+                <div class="project-tag">Portfolio</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    Website portofolio pribadi yang menampilkan profil,
+                    keterampilan, pendidikan, dan proyek-proyek yang telah
+                    dikerjakan.
+                </p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/mrvelljgo-source"
+                   class="btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i> View on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+
+        <div class="contact-wrapper">
+            <div class="contact-info reveal">
+                <h3>Mari Terhubung</h3>
+                <p>Punya pertanyaan, proyek, atau sekadar ingin menyapa? Jangan ragu untuk menghubungi saya.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:marvell@example.com">marvell@example.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                    <div>
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/mrvelljgo-source" target="_blank" rel="noopener noreferrer">mrvelljgo-source</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/marvell-arraya-kusnadi-96776a3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">Marvell Arraya Kusnadi</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+                    <div>
+                        <span class="contact-label">Instagram</span>
+                        <a href="https://www.instagram.com/llevram_0?xtok=MWowc3JmeGFmYWtwOQ==" target="_blank" rel="noopener noreferrer">@llevram_0</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-map-marker-alt"></i></div>
+                    <div>
+                        <span class="contact-label">Lokasi</span>
+                        <span>Jakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form reveal" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Nama kamu" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@kamu.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesanmu di sini..." required></textarea>
+                </div>
+                <button type="submit" class="btn" id="submit-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
+                </button>
+                <p class="form-note" id="form-note" aria-live="polite"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">MARVELL<span>.</span></div>
+            <p>Dibuat dengan <i class="fa-solid fa-heart" style="color:#f43f5e;"></i> oleh Marvell Arraya Kusnadi</p>
+            <div class="footer-social">
+                <a href="https://github.com/mrvelljgo-source" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/marvell-arraya-kusnadi-96776a3b0?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/llevram_0?xtok=MWowc3JmeGFmYWtwOQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <p class="footer-copy">&copy; <span id="year"></span> Marvell. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
